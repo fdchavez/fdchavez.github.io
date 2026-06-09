@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Fredierick Chavez — Portfolio Website
+        Files:
+        - index.html: structure/content
+        - style.css: design and responsiveness
+        - script.js: interactions
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fredierick Chavez | Business Analytics Portfolio</title>
+    <meta name="description" content="Portfolio of Fredierick Chavez, Master of Data Science graduate from Monash University, focused on business analytics, business intelligence, dashboards, and data-driven decision making." />
+
+    <!-- Google Font: safe to remove if you prefer system fonts only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- =========================
+         Header / Navigation
+    ========================== -->
+    <header class="site-header" id="top">
+        <nav class="navbar container">
+            <a href="#top" class="logo">Fredierick<span>.</span></a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+
+            <!-- Dark mode toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- =========================
+             Hero Section
+        ========================== -->
+        <section class="hero section">
+            <div class="hero-bg" aria-hidden="true">
+                <span class="orb orb-1"></span>
+                <span class="orb orb-2"></span>
+                <span class="orb orb-3"></span>
+                <span class="hero-grid-overlay"></span>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <p class="eyebrow">Business Analytics Portfolio</p>
+
+                    <h1>Hi, I'm <span>Fredierick Chavez</span>.</h1>
+
+                    <h2>Data Science Graduate | Business Analyst | BI & Dashboard Specialist</h2>
+
+                    <p class="hero-tagline">
+                        I turn raw data into clear business insights, actionable reports, and dashboards that help teams make better decisions.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="Fredierick_Chavez_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener">View Resume</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+
+                    <div class="hero-stats" aria-label="Portfolio highlights">
+                        <div>
+                            <strong>Master's</strong>
+                            <span>Data Science</span>
+                        </div>
+                        <div>
+                            <strong>Power BI</strong>
+                            <span>& Tableau</span>
+                        </div>
+                        <div>
+                            <strong>Melbourne</strong>
+                            <span>Australia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card reveal">
+                    <div class="profile-card">
+                        <div class="profile-avatar">FC</div>
+                        <h3>Fredierick Chavez</h3>
+                        <p>Business Analytics Graduate</p>
+
+                        <div class="profile-lines">
+                            <span>Python • SQL • Power BI</span>
+                            <span>Tableau • Excel • Reporting</span>
+                            <span>Business Insights • Storytelling</span>
+                        </div>
+
+                        <div class="availability">
+                            <span class="status-dot"></span>
+                            Open to graduate and junior roles
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             About Section
+        ========================== -->
+        <section class="section" id="about">
+            <div class="container two-column">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">About Me</p>
+                    <h2>Turning data into decisions with a business-first mindset.</h2>
+                </div>
+
+                <div class="about-text reveal">
+                    <p>
+                        I recently completed my <strong>Master of Data Science at Monash University</strong>,
+                        where I developed strong skills in business analytics, data visualisation, dashboard
+                        design, and translating complex data into clear, actionable insights.
+                    </p>
+
+                    <p>
+                        I enjoy building dashboards and reports that make information easy to understand at
+                        a glance. My projects have covered data cleaning, KPI tracking, stakeholder reporting,
+                        SQL querying, backend development, user testing, and written documentation.
+                    </p>
+
+                    <p>
+                        I am currently seeking opportunities as a <strong>Business Analyst</strong>,
+                        <strong>Data Analyst</strong>, <strong>BI Analyst</strong>, or
+                        <strong>Graduate Technology</strong> professional where I can help organisations
+                        use their data more effectively.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Skills Section
+        ========================== -->
+        <section class="section section-soft" id="skills">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <p class="eyebrow">Skills</p>
+                    <h2>Technical and analytical skills for business intelligence roles.</h2>
+                    <p>
+                        A focused mix of data querying, BI tools, visualisation, reporting,
+                        and professional communication skills.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="icon">💻</div>
+                        <h3>Data & Querying</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Pandas</li>
+                            <li>Excel (advanced)</li>
+                            <li>PostgreSQL</li>
+                            <li>PySpark</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="icon">📊</div>
+                        <h3>BI & Visualisation</h3>
+                        <ul>
+                            <li>Power BI</li>
+                            <li>Tableau</li>
+                            <li>Matplotlib</li>
+                            <li>Dashboard design</li>
+                            <li>Data storytelling</li>
+                            <li>KPI reporting</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="icon">📈</div>
+                        <h3>Business Analytics</h3>
+                        <ul>
+                            <li>Requirements gathering</li>
+                            <li>Process analysis</li>
+                            <li>Stakeholder reporting</li>
+                            <li>Business insights</li>
+                            <li>Data-driven decisions</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="icon">🛠️</div>
+                        <h3>Tools & Tech</h3>
+                        <ul>
+                            <li>GitHub</li>
+                            <li>VS Code</li>
+                            <li>FastAPI</li>
+                            <li>HTML / CSS / JS</li>
+                            <li>Jira / Confluence</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="icon">🤝</div>
+                        <h3>Professional Skills</h3>
+                        <ul>
+                            <li>Communication</li>
+                            <li>Stakeholder management</li>
+                            <li>Problem solving</li>
+                            <li>User testing</li>
+                            <li>Documentation</li>
+                            <li>Presentation skills</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Featured Projects Section
+        ========================== -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <p class="eyebrow">Featured Project</p>
+                    <h2>A real, live project — built end to end and shipped to production.</h2>
+                    <p>
+                        My flagship industry project. More analytics and dashboard projects are
+                        in progress and will be added here as they go live.
+                    </p>
+                </div>
+
+                <div class="projects-grid featured-single">
+                    <article class="project-card featured-project reveal">
+                        <div class="featured-info">
+                            <span class="project-label">Industry Project · Live</span>
+                            <h3>MyCyberMate</h3>
+
+                            <p>
+                                A scam-awareness web app helping older Australians recognise, avoid, and
+                                report scams. Built as an industry capstone project, it pairs an interactive
+                                statistics dashboard with practical tools like a scam-risk score and a
+                                guided "ScamBot" assistant.
+                            </p>
+
+                            <div class="tech-stack">
+                                <span>Vue.js</span>
+                                <span>Vite</span>
+                                <span>FastAPI</span>
+                                <span>PostgreSQL</span>
+                                <span>Dashboard</span>
+                            </div>
+
+                            <ul class="project-features">
+                                <li>Scam-risk assessment score</li>
+                                <li>Interactive statistics dashboard</li>
+                                <li>"ScamBot" guided assistant</li>
+                                <li>Safe-posting and safe-investing guides</li>
+                                <li>Built with a Vue + FastAPI + PostgreSQL stack</li>
+                            </ul>
+
+                            <div class="project-actions">
+                                <a href="https://mycybermate.me" class="btn btn-small btn-primary" target="_blank" rel="noopener">Visit live site →</a>
+                            </div>
+                        </div>
+
+                        <aside class="featured-preview" aria-hidden="true">
+                            <div class="browser-frame">
+                                <div class="browser-bar">
+                                    <span></span><span></span><span></span>
+                                    <em>mycybermate.me</em>
+                                </div>
+                                <div class="browser-body">
+                                    <strong>Stay Safe Online with CyberMate</strong>
+                                    <p>Your trusted mate for spotting scams and staying secure.</p>
+                                    <div class="preview-chips">
+                                        <span>ScamBot</span>
+                                        <span>Risk Score</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Experience Section
+        ========================== -->
+        <section class="section section-dark" id="experience">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <p class="eyebrow">Experience</p>
+                    <h2>Customer-facing experience with strong communication, accuracy, and problem-solving.</h2>
+                    <p>
+                        My work experience has strengthened the professional skills I bring into analytics roles:
+                        clear communication, attention to detail, teamwork, and practical problem solving.
+                    </p>
+                </div>
+
+                <div class="timeline-grid">
+                    <article class="timeline-card reveal">
+                        <span class="timeline-tag">Experience</span>
+                        <h3>Sales Representative — Autobarn Melbourne</h3>
+                        <p class="timeline-place">Permanent Part-Time</p>
+                        <p class="timeline-date">December 2024 – Present</p>
+                        <p>
+                            Built strong stakeholder communication skills in a high-volume customer service environment,
+                            supporting customers with technical product questions and practical recommendations.
+                        </p>
+                    </article>
+
+                    <article class="timeline-card reveal">
+                        <span class="timeline-tag">Operations</span>
+                        <h3>Records, Inventory & Supplier Support</h3>
+                        <p class="timeline-place">Autobarn Melbourne</p>
+                        <p class="timeline-date">Accuracy and process focus</p>
+                        <p>
+                            Maintained accuracy across records, inventory checks, and supplier credit claims while
+                            balancing priorities during busy periods.
+                        </p>
+                    </article>
+
+                    <article class="timeline-card reveal">
+                        <span class="timeline-tag">Transferable Skills</span>
+                        <h3>Stakeholder Communication</h3>
+                        <p class="timeline-place">Customer-facing professional experience</p>
+                        <p class="timeline-date">Professional development</p>
+                        <p>
+                            Developed confidence explaining complex information simply, listening to user needs,
+                            and communicating practical solutions clearly.
+                        </p>
+                    </article>
+
+                    <article class="timeline-card reveal">
+                        <span class="timeline-tag">Career Goal</span>
+                        <h3>Business / Data / BI Analyst Roles</h3>
+                        <p class="timeline-place">Open to opportunities</p>
+                        <p class="timeline-date">Graduate and junior roles</p>
+                        <p>
+                            Seeking roles involving SQL, dashboards, reporting, KPI tracking, business insights,
+                            documentation, and stakeholder communication.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Education Section
+        ========================== -->
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <p class="eyebrow">Education</p>
+                    <h2>Academic foundation in data science, analytics, and business intelligence.</h2>
+                </div>
+
+                <div class="timeline-grid education-grid">
+                    <article class="timeline-card light-card reveal">
+                        <span class="timeline-tag">Postgraduate</span>
+                        <h3>Master of Data Science</h3>
+                        <p class="timeline-place">Monash University, Melbourne</p>
+                        <p class="timeline-date">Completed December 2025</p>
+                        <p>
+                            Built skills in Python, SQL, data visualisation, machine learning, dashboards,
+                            statistical modelling, big data processing, and industry-style project delivery.
+                        </p>
+                    </article>
+
+                    <article class="timeline-card light-card reveal">
+                        <span class="timeline-tag">Undergraduate</span>
+                        <h3>Bachelor of Business Intelligence & Analytics</h3>
+                        <p class="timeline-place">De La Salle–College of Saint Benilde</p>
+                        <p class="timeline-date">With Honours, Cum Laude</p>
+                        <p>
+                            Developed a strong business analytics foundation across reporting, data interpretation,
+                            information systems, and business-focused decision support.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Leadership Section
+        ========================== -->
+        <section class="section section-soft" id="leadership">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <p class="eyebrow">Leadership & Volunteering</p>
+                    <h2>Community involvement that strengthened my teamwork and communication.</h2>
+                    <p>
+                        These roles helped me build confidence in leadership, public speaking, cultural awareness,
+                        teamwork, marketing, and student support.
+                    </p>
+                </div>
+
+                <div class="leadership-grid">
+                    <article class="leadership-card reveal">
+                        <h3>Monash University</h3>
+                        <ul>
+                            <li>Student Community Advisor — Monash Student Communities</li>
+                            <li>English Connect Ambassador — Monash English Connect</li>
+                            <li>Marketing Committee Member — MonSec, Monash Cybersecurity</li>
+                        </ul>
+                    </article>
+
+                    <article class="leadership-card reveal">
+                        <h3>De La Salle–College of Saint Benilde</h3>
+                        <ul>
+                            <li>Event Head / Committee Member — Benilde International Students Emissaries</li>
+                            <li>Creatives Director / Marketing Committee — SMIT Student Government</li>
+                            <li>Marketing Committee — Business Intelligence & Analytics Society</li>
+                            <li>Logistics Committee — Computer Business Association</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Stories Section
+        ========================== -->
+        <section class="section" id="stories">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <p class="eyebrow">Leadership Stories</p>
+                    <h2>Personal stories behind my professional skills.</h2>
+                    <p>
+                        A few of the volunteering and leadership roles that shaped how I communicate,
+                        collaborate, and support the people around me.
+                    </p>
+                </div>
+
+                <div class="stories-list">
+                    <article class="story-card reveal">
+                        <img src="images/monash-community.jpg" alt="Student Community Advisor experience at Monash" onerror="this.style.display='none'" />
+                        <div>
+                            <span class="story-label">Community & Leadership</span>
+                            <h3>Student Community Advisor — Monash Student Communities</h3>
+                            <p>
+                                I supported student engagement activities and helped create a welcoming environment
+                                for students at Monash University. This taught me how to communicate clearly, work
+                                with diverse groups, and support others professionally.
+                            </p>
+                            <p><strong>Skills gained:</strong> Communication, leadership, teamwork, cultural awareness</p>
+                        </div>
+                    </article>
+
+                    <article class="story-card reveal">
+                        <img src="images/english-connect.jpg" alt="English Connect Ambassador experience" onerror="this.style.display='none'" />
+                        <div>
+                            <span class="story-label">Mentoring & Communication</span>
+                            <h3>English Connect Ambassador — Monash English Connect</h3>
+                            <p>
+                                I supported students in building confidence with English communication. This experience
+                                strengthened my ability to explain ideas clearly, encourage others, and communicate with empathy.
+                            </p>
+                            <p><strong>Skills gained:</strong> Public speaking, mentoring, confidence, empathy</p>
+                        </div>
+                    </article>
+
+                    <article class="story-card reveal">
+                        <img src="images/monsec.jpg" alt="MonSec cybersecurity volunteering experience" onerror="this.style.display='none'" />
+                        <div>
+                            <span class="story-label">Cybersecurity & Marketing</span>
+                            <h3>Marketing Committee Member — MonSec</h3>
+                            <p>
+                                I contributed to MonSec's marketing activities and helped promote cybersecurity events
+                                and student engagement. This connected my interest in cybersecurity with communication,
+                                design, and community involvement.
+                            </p>
+                            <p><strong>Skills gained:</strong> Marketing, cybersecurity awareness, teamwork, content planning</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Resume Section
+        ========================== -->
+        <section class="section resume-section" id="resume">
+            <div class="container resume-box reveal">
+                <div>
+                    <p class="eyebrow">Resume</p>
+                    <h2>Want a quick overview of my experience, projects, and skills?</h2>
+                    <p>Download my resume below.</p>
+                </div>
+
+                <!-- Resume PDF must sit next to index.html with this exact filename (case-sensitive) -->
+                <a href="Fredierick_Chavez_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">View Resume</a>
+            </div>
+        </section>
+
+        <!-- =========================
+             Contact Section
+        ========================== -->
+        <section class="section section-soft" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info reveal">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let's connect.</h2>
+                    <p>
+                        I'm currently open to business analyst, data analyst, BI analyst,
+                        and graduate technology roles.
+                    </p>
+
+                    <div class="contact-list">
+                        <a href="mailto:fredierickchavez23@gmail.com">fredierickchavez23@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/fredierick-raine-chavez" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/fdchavez" target="_blank" rel="noopener">GitHub</a>
+                        <span>Hawthorn East, VIC</span>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+
+                    <p class="form-note" id="formNote">
+                        This demo form shows a success message only. Connect it to Formspree, Netlify Forms,
+                        or a backend later to receive real messages.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Fredierick Chavez. Built with passion for data, business intelligence, and problem solving.</p>
+            <a href="#top">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
