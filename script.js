@@ -124,14 +124,39 @@ const contactForm = document.getElementById("contactForm");
 const formNote    = document.getElementById("formNote");
 
 if (contactForm && formNote) {
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    formNote.textContent  = "Thanks! Your message has been captured in the demo form. Connect this form to a backend to receive real messages.";
-    formNote.style.color      = "#065f46";
-    formNote.style.fontWeight = "700";
+    const submitButton = contactForm.querySelector("button[type='submit']");
+    if (submitButton) submitButton.disabled = true;
 
-    contactForm.reset();
+    formNote.style.fontWeight = "700";
+    formNote.style.color      = "#334155";
+    formNote.textContent      = "Sending...";
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method:  "POST",
+            body:    new FormData(contactForm),
+            headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+            formNote.textContent = "Thanks! Your message has been sent — I'll get back to you by email.";
+            formNote.style.color = "#065f46";
+            contactForm.reset();
+        } else {
+            const data = await response.json().catch(() => ({}));
+            const msg  = data.errors ? data.errors.map((e) => e.message).join(", ") : "Something went wrong.";
+            formNote.textContent = `Sorry, your message couldn't be sent (${msg}). Please email me directly.`;
+            formNote.style.color = "#b91c1c";
+        }
+    } catch (error) {
+        formNote.textContent = "Sorry, your message couldn't be sent. Please check your connection or email me directly.";
+        formNote.style.color = "#b91c1c";
+    } finally {
+        if (submitButton) submitButton.disabled = false;
+    }
 });
 }
 
